@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_chat/widgets/category_selector.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -35,7 +36,11 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: Text('hello'),
+      body: Column(
+        children: <Widget>[
+          CategorySelector(),
+        ],
+      ),
     );
   }
 }
