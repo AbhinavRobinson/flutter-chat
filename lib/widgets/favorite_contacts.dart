@@ -9,7 +9,7 @@ class FavoriteContacts extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 10.0),
       child: Column(
-        children: [
+        children: <Widget>[
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.0),
             child: Row(
