@@ -21,9 +21,23 @@ class RecentChats extends StatelessWidget {
             final chat = chats[index];
 
             return Row(
-              children: <Widget>[
-                Text(
-                  chat.sender.name,
+              children: [
+                Row(
+                  children: <Widget>[
+                    CircleAvatar(
+                      radius: 35.0,
+                      backgroundImage: AssetImage(chat.sender.imageUrl),
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          chat.sender.name,
+                        ),
+                        Text(chat.text)
+                      ],
+                    ),
+                  ],
                 ),
               ],
             );
