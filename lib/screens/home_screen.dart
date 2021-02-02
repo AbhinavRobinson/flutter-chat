@@ -14,19 +14,19 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
+        centerTitle: true,
         leading: IconButton(
           icon: Icon(Icons.menu),
           iconSize: 30.0,
           color: Colors.white,
           onPressed: () {},
         ),
-        title: Center(
-          child: Text(
-            'Chats',
-            style: TextStyle(
-              fontSize: 28.0,
-              fontWeight: FontWeight.bold,
-            ),
+        title: Text(
+          'Chats',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 28.0,
+            fontWeight: FontWeight.bold,
           ),
         ),
         elevation: 0.0,
