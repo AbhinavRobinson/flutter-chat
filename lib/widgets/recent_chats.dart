@@ -21,6 +21,7 @@ class RecentChats extends StatelessWidget {
             final chat = chats[index];
 
             return Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: <Widget>[
@@ -33,10 +34,32 @@ class RecentChats extends StatelessWidget {
                       children: [
                         Text(
                           chat.sender.name,
+                          style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 15.0,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                        Text(chat.text)
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.45,
+                          child: Text(
+                            chat.text,
+                            style: TextStyle(
+                              color: Colors.blueGrey,
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.w600,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        )
                       ],
                     ),
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+                    Text(chat.time),
+                    Text('NEW'),
                   ],
                 ),
               ],
