@@ -66,7 +66,7 @@ class FavoriteContacts extends StatelessWidget {
                 );
               },
             ),
-          )
+          ),
         ],
       ),
     );
