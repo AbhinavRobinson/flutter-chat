@@ -36,7 +36,7 @@ class RecentChats extends StatelessWidget {
                   ),
                 ),
                 child: Container(
-                  margin: EdgeInsets.only(top: 5.0, bottom: 5.0, right: 20.0),
+                  margin: EdgeInsets.only(top: 5.0, bottom: 5.0, right: 10.0),
                   padding:
                       EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                   decoration: BoxDecoration(
@@ -68,7 +68,7 @@ class RecentChats extends StatelessWidget {
                                 ),
                               ),
                               Container(
-                                width: MediaQuery.of(context).size.width * 0.45,
+                                width: MediaQuery.of(context).size.width * 0.40,
                                 child: Text(
                                   chat.text,
                                   style: TextStyle(
@@ -112,7 +112,7 @@ class RecentChats extends StatelessWidget {
                                     ),
                                   ),
                                 )
-                              : Text(''),
+                              : SizedBox.shrink(),
                         ],
                       ),
                     ],
