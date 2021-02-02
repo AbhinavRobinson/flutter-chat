@@ -85,7 +85,7 @@ class RecentChats extends StatelessWidget {
                         SizedBox(height: 5.0),
                         chat.unread
                             ? Container(
-                                width: 40.0,
+                                width: 60.0,
                                 height: 20.0,
                                 decoration: BoxDecoration(
                                   color: Theme.of(context).primaryColor,
