@@ -12,6 +12,7 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
+  // Return Messages
   _buildMessage(Message message, bool isMe) {
     return Container(
       margin: isMe
@@ -30,10 +31,32 @@ class _ChatScreenState extends State<ChatScreen> {
                 bottomRight: Radius.circular(15.0),
               ),
       ),
-      child: Text(message.text),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(
+            message.time,
+            style: TextStyle(
+              color: Colors.blueGrey,
+              fontSize: 16.0,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          SizedBox(height: 8.0),
+          Text(
+            message.text,
+            style: TextStyle(
+              color: Colors.grey,
+              fontSize: 16.0,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ],
+      ),
     );
   }
 
+  // Return chat screen
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -74,6 +97,7 @@ class _ChatScreenState extends State<ChatScreen> {
                   topRight: Radius.circular(30.0),
                 ),
                 child: ListView.builder(
+                  reverse: true,
                   padding: EdgeInsets.only(top: 15.0),
                   itemCount: messages.length,
                   itemBuilder: (BuildContext context, int index) {
